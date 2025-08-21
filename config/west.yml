@@ -32,7 +32,7 @@ manifest:
   projects:
     - name: zmk-keyboard-piantor
       remote: dani0854
-      repo-path: zmk-keyboard-piantor
+      repo-path: dani0854/zmk-keyboard-piantor
       revision: main
       path: modules/personal/zmk-keyboard-piantor
     - name: zmk
