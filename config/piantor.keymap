@@ -1,47 +1,50 @@
-# Define key position labels matching the 42-key Piantor layout order below.
-# Order (indices 0..41):
-#  - Row 1: [L6]  LT0..LT4   RT0..RT4  [R6]
-#  - Row 2: [L6]  LM0..LM4   RM0..RM4  [R6]
-#  - Row 3: [L6]  LB0..LB4   RB0..RB4  [R6]
-#  - Thumbs: LGUI  LH0 LH1   RH0 RH1   SMART_MOUSE
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
-# Left top row (5 of 6 used)
-# indices 1..5
-# index 0 is unused (padding)
-# Right top row (5 of 6 used)
-# indices 6..10
-# index 11 is unused (padding)
-# Left middle row (5 of 6 used)
-# indices 13..17
-# index 12 is unused (padding)
-# Right middle row (5 of 6 used)
-# indices 18..22
-# index 23 is unused (padding)
-# Left bottom row (5 of 6 used)
-# indices 25..29
-# index 24 is unused (padding)
-# Right bottom row (5 of 6 used)
-# indices 30..34
-# index 35 is unused (padding)
-# Thumbs
-# indices: 36 (LGUI), 37 (LH0), 38 (LH1), 39 (RH0), 40 (RH1), 41 (SMART_MOUSE)
+// Define key position labels matching the 42-key Piantor layout order below.
+// Order (indices 0..41):
+//  - Row 1: [L6]  LT0..LT4   RT0..RT4  [R6]
+//  - Row 2: [L6]  LM0..LM4   RM0..RM4  [R6]
+//  - Row 3: [L6]  LB0..LB4   RB0..RB4  [R6]
+//  - Thumbs: LGUI  LH0 LH1   RH0 RH1   SMART_MOUSE
 
-# Left side labels
-# Top
+// Left top row (5 of 6 used)
+// indices 1..5
+// index 0 is unused (padding)
+// Right top row (5 of 6 used)
+// indices 6..10
+// index 11 is unused (padding)
+// Left middle row (5 of 6 used)
+// indices 13..17
+// index 12 is unused (padding)
+// Right middle row (5 of 6 used)
+// indices 18..22
+// index 23 is unused (padding)
+// Left bottom row (5 of 6 used)
+// indices 25..29
+// index 24 is unused (padding)
+// Right bottom row (5 of 6 used)
+// indices 30..34
+// index 35 is unused (padding)
+// Thumbs
+// indices: 36 (LGUI), 37 (LH0), 38 (LH1), 39 (RH0), 40 (RH1), 41 (SMART_MOUSE)
+
+// Left side labels
+// Top
 #define LT5 0 /* optional: sixth column, unused in base layout */
 #define LT0 1
 #define LT1 2
 #define LT2 3
 #define LT3 4
 #define LT4 5
-# Middle
+// Middle
 #define LM5 12 /* optional: sixth column, unused in base layout */
 #define LM0 13
 #define LM1 14
 #define LM2 15
 #define LM3 16
 #define LM4 17
-# Bottom
+// Bottom
 #define LB5 24 /* optional: sixth column, unused in base layout */
 #define LB0 25
 #define LB1 26
@@ -49,22 +52,22 @@
 #define LB3 28
 #define LB4 29
 
-# Right side labels
-# Top
+// Right side labels
+// Top
 #define RT0 6
 #define RT1 7
 #define RT2 8
 #define RT3 9
 #define RT4 10
 #define RT5 11 /* optional: sixth column, unused in base layout */
-# Middle
+// Middle
 #define RM0 18
 #define RM1 19
 #define RM2 20
 #define RM3 21
 #define RM4 22
 #define RM5 23 /* optional: sixth column, unused in base layout */
-# Bottom
+// Bottom
 #define RB0 30
 #define RB1 31
 #define RB2 32
@@ -72,7 +75,7 @@
 #define RB4 34
 #define RB5 35 /* optional: sixth column, unused in base layout */
 
-# Thumbs
+// Thumbs
 #define LH2 36 /* third left thumb position (LGUI in this layout) */
 #define LH0 37
 #define LH1 38
@@ -97,10 +100,10 @@
         RH                    &smart_mouse                                     \
     )
 
-# Do not define CONFIG_WIRELESS: Piantor is wired split; BT selection keys resolve to transparent.
+// Do not define CONFIG_WIRELESS: Piantor is wired split; BT selection keys resolve to transparent.
 
-# Pull in the reusable base keymap (layers, behaviors, combos, etc.).
-# This file provides the actual bindings passed to ZMK_BASE_LAYER above.
+// Pull in the reusable base keymap (layers, behaviors, combos, etc.).
+// This file provides the actual bindings passed to ZMK_BASE_LAYER above.
 #include "base.keymap"
 
 /* Use the shield's default physical layout from the Piantor module. */
