@@ -35,6 +35,8 @@ manifest:
       repo-path: dani0854/zmk-keyboard-piantor
       revision: main
       path: modules/personal/zmk-keyboard-piantor
+      import: false
+
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
