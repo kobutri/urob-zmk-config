@@ -26,8 +26,15 @@ manifest:
       url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: dani0854
+      url-base: https://github.com
 
   projects:
+    - name: zmk-keyboard-piantor
+      remote: dani0854
+      repo-path: zmk-keyboard-piantor
+      revision: main
+      path: modules/personal/zmk-keyboard-piantor
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
